@@ -8,18 +8,17 @@ interface Teacher {
     location: string;
     [key: string]: any;
 }
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
 
-const teacher3: Teacher = {
+// Example usage
+const director1: Directors = {
     firstName: 'John',
     lastName: 'Doe',
-    fullTimeEmployee: false,
-    yearsOfExperience: 10,
     location: 'London',
-    contract: false, // additional property
-};
-
-const heading = document.createElement('h1');
-heading.innerText = 'Bonjour, monde !';
-document.body.appendChild(heading);
-
-console.log('teatcher3');
+    fullTimeEmployee: true,
+    yearsOfExperience: 10,
+    numberOfReports: 17,
+  };
+console.log(director1);
